@@ -13,7 +13,6 @@
         v-for="(machine, index) in machines"
         :position="{lat: machine.latitude, lng: machine.longitude }"
         :clickable="true"
-        :draggable="true"
         @click="center=machine.position"
       ></gmap-marker>
     </gmap-map>

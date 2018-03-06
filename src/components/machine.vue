@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ name }}</h1>
-    <div v-bind:class="[status ? 'text-success' : 'text-danger']">
+    <div v-bind:class="status ? 'text-success' : 'text-danger'">
       Status :
       <span v-html="status ? 'OK' : 'KO'"></span>
     </div>
