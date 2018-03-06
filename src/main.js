@@ -5,6 +5,10 @@ import List from './components/MachinesList.vue'
 import Map from './components/MachinesMap.vue'
 import Machine from './components/Machine.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import Axios from 'axios'
+import ToggleButton from 'vue-js-toggle-button'
+
+Vue.use(ToggleButton);
 
 Vue.use(VueGoogleMaps, {
   load: {
