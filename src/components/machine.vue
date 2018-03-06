@@ -1,16 +1,19 @@
 <template>
   <div>
-    {{ machine.nom }}
-    <toggle-button :labels="true" :value="machine.status" @change="machine.status = !machine.status"/>
+    <h1>{{ name }}</h1>
+    <div v-bind:class="[status ? 'text-success' : 'text-danger']">
+      Status :
+      <span v-html="status ? 'OK' : 'KO'"></span>
+    </div>
     <br/>
-    <br/>
+    <p>Last time checked : {{ checkedAt }} </p>
   </div>
 </template>
 
 <script>
   export default {
     name: "machine",
-    props: ['machine']
+    props: ['name', 'status', 'checkedAt'],
   }
 </script>
 
