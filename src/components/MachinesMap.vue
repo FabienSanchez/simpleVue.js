@@ -9,8 +9,8 @@
       map-type-id="hybrid"
     >
       <gmap-marker
-        :key="index"
-        v-for="(machine, index) in machines"
+        :key="machine.id"
+        v-for="(machine) in machines"
         :position="{lat: machine.latitude, lng: machine.longitude }"
         :clickable="true"
         @click="center=machine.position"
